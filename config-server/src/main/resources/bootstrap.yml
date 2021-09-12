@@ -8,10 +8,10 @@ spring:
           uri: https://github.com/yassire/spring-cloud-config-server-repository
           default-label: main
           username: yassire
-          password: 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
+          password: '{cipher}2bc868ad1796764b36c1b65a5764060541461079231651303898b416c3271bf22112310580231184b1abfe37ff9c1e34b94060c6d1089007462c12b2c70d130d'
           clone-on-start: true
     fail-fast: true
   security:
     user:
       name: spring_cloud_user
-      password: springCloud_Pwd!
+      password: '{cipher}c1aea50d058840a25afd32dc2f54791308426e567b87983a4ec01cd50733de64d23db37739c08060e500a509be073239'
