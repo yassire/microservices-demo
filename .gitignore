@@ -33,4 +33,4 @@ build/
 .vscode/
 .mvn/
 *.log
-twitter-to-kafka-service/src/main/resources/twitter4j.properties.sample
+twitter-to-kafka-service/src/main/resources/twitter4j.properties
