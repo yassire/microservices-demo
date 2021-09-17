@@ -1,0 +1,19 @@
+elastic-query-service:
+  version: v1
+
+server:
+  port: 8183
+  servlet:
+    context-path: /elastic-query-service
+
+elastic-query-config:
+  text-field: text
+elastic-config:
+  index-name: twitter-index
+  connection-url: http://localhost:9200
+  connection-timeout-ms: 5000
+  socket-timeout-ms: 30000
+user-config:
+  username: thomas
+  password: '{cipher}4a5c00fd76c1b66c845dbf54abb5f7cb1cce7ebde9929816d527748263f52a0a'
+  roles: USER

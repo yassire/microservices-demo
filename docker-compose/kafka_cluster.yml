@@ -2,6 +2,7 @@ version: '3.7'
 services:
   zookeeper:
     image: confluentinc/cp-zookeeper:${KAFKA_VERSION:-latest}
+    container_name: zookeeper
     hostname: zookeeper
     ports:
       - "2181:2181"
@@ -16,6 +17,7 @@ services:
       - ${GLOBAL_NETWORK:-kafka}
   schema-registry:
     image: confluentinc/cp-schema-registry:${KAFKA_VERSION}
+    container_name: schema-registry
     hostname: schema-registry
     depends_on:
       - zookeeper
@@ -33,6 +35,7 @@ services:
       - ${GLOBAL_NETWORK:-kafka}
   kafka-broker-1:
     image: confluentinc/cp-kafka:${KAFKA_VERSION}
+    container_name: kafka-broker-1
     hostname: kafka-broker-1
     ports:
       - "19092:19092"
@@ -49,6 +52,7 @@ services:
       - ${GLOBAL_NETWORK:-kafka}
   kafka-broker-2:
     image: confluentinc/cp-kafka:${KAFKA_VERSION}
+    container_name: kafka-broker-2
     hostname: kafka-broker-2
     ports:
       - "29092:29092"
@@ -65,6 +69,7 @@ services:
       - ${GLOBAL_NETWORK:-kafka}
   kafka-broker-3:
     image: confluentinc/cp-kafka:${KAFKA_VERSION}
+    container_name: kafka-broker-3
     hostname: kafka-broker-3
     ports:
       - "39092:39092"
