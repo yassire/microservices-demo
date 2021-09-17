@@ -17,3 +17,10 @@ user-config:
   username: thomas
   password: '{cipher}4a5c00fd76c1b66c845dbf54abb5f7cb1cce7ebde9929816d527748263f52a0a'
   roles: USER
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+security:
+  paths-to-ignore: /api-docs
